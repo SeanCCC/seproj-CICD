@@ -4,14 +4,14 @@ var app = express();
 
 app.get('/test', function (req, res) {
     var data = {
-        "msg": "hello world! 2130", 
+        "msg": "hello world! 2332", 
         "result": add(Number(req.query.input))
     }
     console.log( data );
     res.end( JSON.stringify(data) );
 })
 
-var server = app.listen(8080, function () {
+var server = app.listen(3000, function () {
 
   var host = server.address().address
   var port = server.address().port
