@@ -4,7 +4,7 @@ var app = express();
 
 app.get('/', function (req, res) {
     var data = {
-        "msg": "hello world!", 
+        "msg": "hello world! 2130", 
         "result": add(Number(req.query.input))
     }
     console.log( data );
