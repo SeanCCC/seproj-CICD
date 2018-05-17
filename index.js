@@ -2,7 +2,7 @@ var express = require('express');
 var add = require('./lib/add');
 var app = express();
 
-app.get('/', function (req, res) {
+app.get('/test', function (req, res) {
     var data = {
         "msg": "hello world! 2130", 
         "result": add(Number(req.query.input))
