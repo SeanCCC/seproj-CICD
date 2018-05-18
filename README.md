@@ -1,21 +1,25 @@
 # CICD
+```
+投影片在repo根目錄
+```
 ## 介紹
 * CICD是一套從版控到單元測試到部屬的自動化流程。
 ### 組成
 * 版本控制 + CI + CD
 ### 版本控制
-* 透過github, gitlab, bitbucket...
-* 把完成的feature給merge到dev上面
+* 工具有github, gitlab, bitbucket...
+* 由於開發的程式日趨複雜，需要工具來管理開發中的每個版本。
+* 有一套叫做gitflow的標準流程
 * ![](https://i.imgur.com/OJdCPxK.png)
 ### CI(Continuous Integration)
 * 自動化檢查
 * 會自動檢查有變更的指定branch，每次有變更都會跑一次unit test
-* 透過travis CI, gitlab CI...
+* 工具有travis CI, gitlab CI...
 * 會在code被merge到master時進行lint與自動化測試
 ### CD(Continuous Deployment)
 * 自動化部屬
 * 每次有變更時，會等待unit test通過，然後執行指定的指令來deploy服務
-* 透過Heroku等等...
+* 工具有Heroku等等...
 ## 實作
 ### Step1 建立要deploy的服務
 * 採用Node JS和express框架
@@ -53,7 +57,7 @@ module.exports = function add(num) {
 ### Step2 將程式碼上傳到Github上
 * 建立repo後把程式碼push上去
 
-### Step3 設定TravisCI
+### Step3 設定TravisCI與Unit Test
 * 將Repo連結到TravisCI
 * 把測試用的程式碼給放上去
 ```javascript=
